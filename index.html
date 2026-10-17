@@ -6,6 +6,8 @@
     <meta name="description" content="Meine persönliche Münzsammlung – durchsuchbar und nach Land und Metall filterbar." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Meine Münzsammlung</title>
+    <script type="module" crossorigin src="/assets/index-DW82rxeF.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-x1XGuNl0.css">
   </head>
   <body>
     <header>
@@ -19,14 +21,62 @@
       </nav>
     </header>
 
-    <main>
-      <!-- Inhaltsbereiche folgen im nächsten Commit -->
+           <main>
+      <section id="ueber" aria-labelledby="ueber-titel">
+        <h2 id="ueber-titel">Über die Sammlung</h2>
+        <p>
+          Seit einigen Jahren sammle ich Münzen – vor allem österreichische
+          Schilling-Umlaufmünzen, Silber-Gedenkmünzen und einzelne Stücke aus
+          anderen Ländern. Auf dieser Seite können Sie meine Sammlung
+          durchsuchen und nach Metall filtern.
+        </p>
+        <figure>
+          <img
+            src="/bilder/muenze.jpg"
+            alt="Silberne Gedenkmünze aus Bulgarien von 1992 zu den XVI. Olympischen Winterspielen, zwei Skiläufer in einer Münzkapsel"
+            width="400"
+            height="432"
+          />
+          <figcaption>Bulgarische Gedenkmünze zu den Olympischen Winterspielen 1992.</figcaption>
+        </figure>
+      </section>
+
+      <section id="sammlung" aria-labelledby="sammlung-titel">
+        <h2 id="sammlung-titel">Sammlung</h2>
+
+        <label for="suche">Münzen durchsuchen</label>
+        <input type="search" id="suche" placeholder="z. B. Schilling" />
+
+        <fieldset>
+          <legend>Nach Metall filtern</legend>
+          <button type="button" data-metall="alle" aria-pressed="true">Alle</button>
+          <button type="button" data-metall="Silber" aria-pressed="false">Silber</button>
+          <button type="button" data-metall="Kupfer-Nickel" aria-pressed="false">Kupfer-Nickel</button>
+          <button type="button" data-metall="Aluminium" aria-pressed="false">Aluminium</button>
+          <button type="button" data-metall="Bronze" aria-pressed="false">Bronze</button>
+        </fieldset>
+
+        <p id="ergebnis-info" aria-live="polite"></p>
+
+        <ul id="muenz-liste"></ul>
+      </section>
+
+      <aside id="statistik" aria-labelledby="statistik-titel">
+        <h2 id="statistik-titel">Statistik</h2>
+        <dl>
+          <dt>Angezeigte Münzen</dt>
+          <dd id="stat-anzahl">–</dd>
+          <dt>Gesamtwert</dt>
+          <dd id="stat-wert">–</dd>
+          <dt>Älteste Münze</dt>
+          <dd id="stat-aelteste">–</dd>
+        </dl>
+      </aside>
     </main>
 
     <footer>
       <p>&copy; 2026 Thomas · Einsendeaufgabe 1, Front-End Development (SED502)</p>
     </footer>
 
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

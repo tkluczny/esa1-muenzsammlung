@@ -58,12 +58,15 @@ Statische Webseite zu meiner persönlichen Münzsammlung – Einsendeaufgabe 1 i
 
 ## Projektstruktur
 ├── index.html Semantisches Seitengerüst
+
 ├── public/bilder/ Eigenes Münzfoto
+
 ├── src/
 │ ├── types.ts Typen und Interface
 │ ├── data.ts Münzdaten
 │ ├── main.ts Logik, Rendering und Event-Handling
 │ └── style.css Styling
+
 ├── lighthouse.png Ergebnis des Accessibility-Audits
 └── reflexion.pdf Reflexionsbericht
 
